@@ -7,7 +7,14 @@ public class Mathey {
      * You will need to practice writing the method signature below!
      * public static ...
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int x, int y){
+        if (x > y){
+            return x;
+        }
+        else{
+            return y;}
+
+    }
 
 
 
@@ -16,24 +23,38 @@ public class Mathey {
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
+    public static double max(double x, double y) {
+        if (x > y){
+            return x;
+        }
+        else{
+            return y;}
+    }
 
 
     /* Write another method called max that takes **three integers**
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int x, int y, int z) {
+    return max(x, max(y, z));
 
-
-
+    }
 
     /* Write another method called max that takes **four doubles**
      * Ex. max(1.0, 4.25, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
+    public static double max(double x, double y, double z, double a) {
+        if (x > y && x > z && x > a){
+            return x;}
+        if (y > x && y > z && y > a){
+            return y;}
+        if (z > y && z > x && z > a){
+            return z;}
+        if (a > y && a > x && a > z){
+            return a;}
+    }
 
 
     /* Write a method that takes **two integers** and generates a random
@@ -44,8 +65,9 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
+    public static int randomTwoInt (int x, int y) {
+        return (int) (Math.random()*y)+x;
+    }
 
 
     /* Write a method that takes **one integer** and generates a random
@@ -56,7 +78,9 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int randomOneInt (int x){
+        return (int) (Math.random()*x+1);
+    }
 
 
 
