@@ -52,8 +52,7 @@ public class Mathey {
             return y;}
         if (z > y && z > x && z > a){
             return z;}
-        if (a > y && a > x && a > z){
-            return a;}
+        return a;
     }
 
 
@@ -96,7 +95,12 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int pow(int x, int y){
+       int num = 1;
+        for (int i = 0; i<y; i++){
+            num*=x;}
+            return num;
+    }
 
 
 
@@ -106,6 +110,12 @@ public class Mathey {
      *     abs(-2) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int abs(int x){
+        if (x>=0){
+            return x;
+        }
+        return x*-1;
+    }
 
 
 
@@ -117,9 +127,16 @@ public class Mathey {
      *     round(2.5) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
+    public static int round(double x) {
+        int z = (int) x + 1;
+        if (x + 0.5 >= z) {
+            int y = (int) x + 1;
+            return y;
+        } else {
+            int trunc = (int) x;
+            return trunc;
+        }
+    }
 
 
     /* Write a method that takes **one double** and returns the
@@ -131,8 +148,9 @@ public class Mathey {
      *     floor(2.999999999999) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
+    public static int floor(double x) {
+        int trunc = (int) x;
+        return trunc;}
 
 
 
@@ -145,7 +163,10 @@ public class Mathey {
      *     ceil(3.01) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int ceil(double x){
+        int z = (int) x + 1;
+        return z;
+    }
 
 
 
